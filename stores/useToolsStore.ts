@@ -55,7 +55,7 @@ interface StoreState {
   setGoogleIntegrationEnabled: (enabled: boolean) => void;
   codeInterpreterEnabled: boolean;
   setCodeInterpreterEnabled: (enabled: boolean) => void;
-  vectorStore: VectorStore | null;
+  vectorStore: VectorStore;
   setVectorStore: (store: VectorStore) => void;
   webSearchConfig: WebSearchConfig;
   setWebSearchConfig: (config: WebSearchConfig) => void;
@@ -68,7 +68,7 @@ interface StoreState {
 const useToolsStore = create<StoreState>()(
   persist(
     (set) => ({
-      vectorStore: defaultVectorStore.id !== "" ? defaultVectorStore : null,
+      vectorStore: defaultVectorStore,
       webSearchConfig: {
         user_location: {
           type: "approximate",

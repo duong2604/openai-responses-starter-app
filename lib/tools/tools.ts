@@ -50,24 +50,24 @@ export const getTools = async (toolsState: ToolsState) => {
     tools.push({ type: "code_interpreter", container: { type: "auto" } });
   }
 
-  if (functionsEnabled) {
-    tools.push(
-      ...toolsList.map((tool) => {
-        return {
-          type: "function",
-          name: tool.name,
-          description: tool.description,
-          parameters: {
-            type: "object",
-            properties: { ...tool.parameters },
-            required: Object.keys(tool.parameters),
-            additionalProperties: false,
-          },
-          strict: true,
-        };
-      })
-    );
-  }
+  // if (functionsEnabled) {
+  //   tools.push(
+  //     ...toolsList.map((tool) => {
+  //       return {
+  //         type: "function",
+  //         name: tool.name,
+  //         description: tool.description,
+  //         parameters: {
+  //           type: "object",
+  //           properties: { ...tool.parameters },
+  //           required: Object.keys(tool.parameters),
+  //           additionalProperties: false,
+  //         },
+  //         strict: true,
+  //       };
+  //     })
+  //   );
+  // }
 
   if (mcpEnabled && mcpConfig.server_url && mcpConfig.server_label) {
     const mcpTool: any = {

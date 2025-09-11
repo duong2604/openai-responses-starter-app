@@ -50,13 +50,13 @@ export default function ContextPanel() {
         >
           <WebSearchConfig />
         </PanelConfig>
-        <PanelConfig
+        {/* <PanelConfig
           title="Code Interpreter"
           tooltip="Allows the assistant to run Python code"
           enabled={codeInterpreterEnabled}
           setEnabled={setCodeInterpreterEnabled}
-        />
-        <PanelConfig
+        /> */}
+        {/* <PanelConfig
           title="Functions"
           tooltip="Allows to use locally defined functions"
           enabled={functionsEnabled}
@@ -80,7 +80,7 @@ export default function ContextPanel() {
           disabled={!oauthConfigured}
         >
           <GoogleIntegrationPanel />
-        </PanelConfig>
+        </PanelConfig> */}
       </div>
     </div>
   );

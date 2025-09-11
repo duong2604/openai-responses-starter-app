@@ -32,6 +32,6 @@ Hi, how can I help you?
 `;
 
 export const defaultVectorStore = {
-  id: "",
-  name: "Example",
+  id: "vs_68c12db4b5c48191a3d54f834df65b65",
+  name: "chatgpt-responses-vector-store",
 };
